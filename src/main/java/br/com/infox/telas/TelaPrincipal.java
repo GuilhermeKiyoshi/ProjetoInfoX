@@ -55,15 +55,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        Desktop.setPreferredSize(new java.awt.Dimension(640, 480));
+
         javax.swing.GroupLayout DesktopLayout = new javax.swing.GroupLayout(Desktop);
         Desktop.setLayout(DesktopLayout);
         DesktopLayout.setHorizontalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 572, Short.MAX_VALUE)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
         DesktopLayout.setVerticalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
         );
 
         lblUsuario.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
@@ -90,6 +92,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         MenCadUsu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_DOWN_MASK));
         MenCadUsu.setText("Usuários");
         MenCadUsu.setEnabled(false);
+        MenCadUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenCadUsuActionPerformed(evt);
+            }
+        });
         MenCad.add(MenCadUsu);
 
         Menu.add(MenCad);
@@ -142,7 +149,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblUsuario)
                     .addComponent(lblData))
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,6 +194,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         sobre.setVisible(true);
     }//GEN-LAST:event_MenAjuSobActionPerformed
 
+    private void MenCadUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenCadUsuActionPerformed
+        // TODO add your handling code here:
+        TelaUsuario usuario = new TelaUsuario();
+        usuario.setVisible(true);
+        Desktop.add(usuario);
+    }//GEN-LAST:event_MenCadUsuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -223,7 +237,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane Desktop;
+    public static javax.swing.JDesktopPane Desktop;
     private javax.swing.JMenu MenAju;
     private javax.swing.JMenuItem MenAjuSob;
     private javax.swing.JMenu MenCad;
