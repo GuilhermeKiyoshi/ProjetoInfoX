@@ -138,7 +138,7 @@
                   <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
                   <Component id="lblData" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="215" max="32767" attributes="0"/>
+              <EmptySpace pref="191" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -178,10 +178,13 @@
     <Component class="javax.swing.JLabel" name="lblUsuario">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="18" style="1"/>
+          <Font name="Noto Sans" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Usu&#xe1;rio"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lblData">
       <Properties>

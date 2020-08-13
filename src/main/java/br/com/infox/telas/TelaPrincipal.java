@@ -66,7 +66,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGap(0, 710, Short.MAX_VALUE)
         );
 
-        lblUsuario.setFont(new java.awt.Font("Noto Sans", 1, 18)); // NOI18N
+        lblUsuario.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
         lblUsuario.setText("Usuário");
 
         lblData.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
@@ -142,7 +142,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblUsuario)
                     .addComponent(lblData))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,7 +236,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenRelSer;
     private javax.swing.JMenuBar Menu;
     private javax.swing.JLabel lblData;
-    private javax.swing.JLabel lblUsuario;
+    public static javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables
 
     private static class DataFormat {

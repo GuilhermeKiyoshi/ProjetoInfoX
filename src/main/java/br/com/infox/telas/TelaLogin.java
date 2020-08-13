@@ -2,6 +2,7 @@ package br.com.infox.telas;
 
 import java.sql.*;
 import br.com.infox.dal.ModuloConexao;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class TelaLogin extends javax.swing.JFrame {
@@ -20,17 +21,27 @@ public class TelaLogin extends javax.swing.JFrame {
             
             rs = pst.executeQuery();
             
-            if (rs.next()) {
-                String perfil=rs.getNString(6);
+            if (rs.next ()) {
+                String perfil=rs.getString(6);
                 if (perfil.equals("admin")){
                 
-                TelaPrincipal principal = new TelaPrincipal();
-                principal.setVisible(true);
-                TelaPrincipal.MenRel.setEnabled(true);
-                TelaPrincipal.MenCadUsu.setEnabled(true);
-                this.dispose();
-                conexao.close();
-            } else {
+                    TelaPrincipal principal = new TelaPrincipal();
+                    principal.setVisible(true);
+                    TelaPrincipal.MenRel.setEnabled(true);
+                    TelaPrincipal.MenCadUsu.setEnabled(true);
+                    TelaPrincipal.lblUsuario.setText(rs.getString(2));
+                    TelaPrincipal.lblUsuario.setForeground(Color.red);
+                    this.dispose();
+                
+                }else{
+                    TelaPrincipal principal = new TelaPrincipal();
+                    principal.setVisible(true);
+                    TelaPrincipal.lblUsuario.setText(rs.getString(2));
+                    this.dispose();
+                
+                }
+                
+                else {
                 JOptionPane.showMessageDialog(null, "usuario e/ou senha inválido(s)!");
             }
              
