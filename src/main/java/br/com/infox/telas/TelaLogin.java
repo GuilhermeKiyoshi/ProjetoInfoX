@@ -21,8 +21,13 @@ public class TelaLogin extends javax.swing.JFrame {
             rs = pst.executeQuery();
             
             if (rs.next()) {
+                String perfil=rs.getNString(6);
+                if (perfil.equals("admin")){
+                
                 TelaPrincipal principal = new TelaPrincipal();
                 principal.setVisible(true);
+                TelaPrincipal.MenRel.setEnabled(true);
+                TelaPrincipal.MenCadUsu.setEnabled(true);
                 this.dispose();
                 conexao.close();
             } else {
@@ -94,6 +99,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
+                        .addGap(0, 0, 0)
                         .addComponent(lblStatus)
                         .addGap(41, 41, 41)
                         .addComponent(btnLogin))
